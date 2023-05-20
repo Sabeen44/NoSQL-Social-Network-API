@@ -3,7 +3,7 @@ const {
   getUsers,
   getSingleUser,
   createUser,
-  //deleteStudent,
+  deleteUser,
   // addAssignment,
   // removeAssignment,
 } = require("../../controllers/userController");
@@ -12,12 +12,12 @@ const {
 router.route("/").get(getUsers).post(createUser);
 
 // /api/users/:userId
-router.route("/:studentId").get(getSingleUser);
+router.route("/:userId").get(getSingleUser).delete(deleteUser);
 
-//.delete(deleteStudent);
+//.delete(deleteUser);
 
 // /api/students/:studentId/assignments
-// router.route("/:studentId/assignments").post(addAssignment);
+/router.route("/:UserId/assignments").post(addAssignment);
 
 // // /api/students/:studentId/assignments/:assignmentId
 // router.route("/:studentId/assignments/:assignmentId").delete(removeAssignment);

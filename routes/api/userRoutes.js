@@ -14,11 +14,6 @@ router.route("/").get(getUsers).post(createUser);
 // /api/users/:userId
 router.route("/:userId").get(getSingleUser).delete(deleteUser);
 
-//.delete(deleteUser);
-
-// /api/students/:studentId/assignments
-/router.route("/:UserId/assignments").post(addAssignment);
-
 // // /api/students/:studentId/assignments/:assignmentId
 // router.route("/:studentId/assignments/:assignmentId").delete(removeAssignment);
 

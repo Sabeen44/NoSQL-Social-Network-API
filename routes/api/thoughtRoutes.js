@@ -1,6 +1,6 @@
 const router = require("express").Router();
-// const {
-//   getCourses,
+const {
+   getCourses,
 //   getSingleCourse,
 //   createCourse,
 //   updateCourse,

@@ -1,30 +1,31 @@
-// const Thought = require("./Thought");
-// const User = require("./User");
+////const Thought = require("./Thought");
+const User = require("./User");
+const { Schema, Types } = require("mongoose");
 
-// ReactionSchema = new Schema({
-//   reactionId: {
-//     type: Schema.Types.ObjectId,
-//     default: () => new mongoose.Types.ObjectId(),
-//   },
+ReactionSchema = new Schema({
+  reactionId: {
+    type: Schema.Types.ObjectId,
+    default: () => new Types.ObjectId(),
+  },
 
-//   reactionBody: {
-//     type: String,
-//     required: true,
-//     maxlength: 280,
-//   },
+  reactionBody: {
+    type: String,
+    required: true,
+    maxlength: 280,
+  },
 
-//   username: {
-//     type: String,
-//     required: true,
-//   },
+  username: {
+    type: String,
+    required: true,
+  },
 
-//   createdAt: {
-//     type: Date,
-//     default: Date.now,
-//     // use a getter method to format the timestamp on query
-//     get: (timestamp) => moment(timestamp).format("MMM Do, YYYY [at] hh:mm a"),
-//   },
-// });
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    // use a getter method to format the timestamp on query
+    get: (timestamp) => moment(timestamp).format("MMM Do, YYYY [at] hh:mm a"),
+  },
+});
 
-// const Reaction = model("reaction", ReactionSchema);
-// module.exports = Reaction;
+//const Reaction = model("reaction", ReactionSchema);
+module.exports = ReactionSchema;

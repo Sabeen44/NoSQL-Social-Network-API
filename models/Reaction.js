@@ -22,10 +22,8 @@ ReactionSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-    // use a getter method to format the timestamp on query
     get: (timestamp) => moment(timestamp).format("MMM Do, YYYY [at] hh:mm a"),
   },
 });
 
-//const Reaction = model("reaction", ReactionSchema);
 module.exports = ReactionSchema;
